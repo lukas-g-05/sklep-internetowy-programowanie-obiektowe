@@ -3,7 +3,7 @@
 Projekt zaliczeniowy z Programowania Obiektowego.
 
 ## Funkcjonalności
-# 1. Zarządzanie Produktami
+### 1. Zarządzanie Produktami
 Ta grupa funkcjonalności dotyczy przeglądania i modyfikacji asortymentu sklepu.
 
 Dla Klienta:
@@ -15,7 +15,7 @@ Dla Administratora:
 - Edycja produktów: Możliwość modyfikacji istniejących produktów (zmiana ceny, opisu, stanu magazynowego).
 - Usuwanie produktów: Możliwość trwałego usunięcia produktu z katalogu sklepu.
 
-# 2. Koszyk Zakupowy
+### 2. Koszyk Zakupowy
 Funkcjonalności związane z tymczasowym gromadzeniem produktów przed finalizacją zakupu.
 
 Dla Klienta:
@@ -23,7 +23,7 @@ Dla Klienta:
 - Podgląd koszyka: Wyświetlenie aktualnej zawartości koszyka, w tym listy produktów, ich ilości oraz łącznej ceny.
 - Modyfikacja koszyka: Możliwość zmiany ilości danego produktu w koszyku lub całkowitego usunięcia go z koszyka.
 
-# 3. Składanie i Obsługa Zamówień
+### 3. Składanie i Obsługa Zamówień
 Proces finalizacji zakupu oraz śledzenia statusu zamówienia.
 
 Dla Klienta:
@@ -34,7 +34,7 @@ Dla Klienta:
 Dla Administratora:
 - Zmiana statusu zamówienia: Możliwość aktualizowania statusu zamówień klientów (np. zmiana ze "Złożone" na "W trakcie realizacji" lub "Wysłane").
 
-# 4. System Płatności
+### 4. System Płatności
 Funkcjonalność odpowiedzialna za symulację opłacenia zamówienia.
 
 Dla Klienta:
