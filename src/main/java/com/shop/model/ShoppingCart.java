@@ -43,6 +43,10 @@ public class ShoppingCart {
         }
     }
 
+    /**
+    * Oblicza całkowitą wartość koszyka.
+    * @return suma cen wszystkich produktów
+    */
     public double calculateTotal() {
         double total = 0;
         for (CartItem item : cartItems) {

@@ -1,12 +1,16 @@
 package com.shop.model;
 
-public class Product {
+public class Product implements Discountable{
     private int productId;
     private String name;
     private String description;
     private double price;
     private int stockQuantity;
     private Category category;
+    @Override
+    public double getDiscountPrice() {
+        return this.price * 0.90; //  10% zniżki dla każdego produktu
+    }
 
     public Product(int productId, String name, String description, double price, int stockQuantity, Category category) {
         this.productId = productId;
