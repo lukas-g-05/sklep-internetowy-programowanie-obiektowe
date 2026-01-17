@@ -3,13 +3,13 @@
 Projekt zaliczeniowy z Programowania Obiektowego. Aplikacja symulująca działanie sklepu internetowego z interfejsem graficznym (GUI), obsługą koszyka, zamówień oraz panelem administratora.
 
 ## Jak uruchomić projekt
-1. Wymagania: Java JDK 17 lub nowsza.
+1. Wymagania: Java JDK 25.
 2. Sklonuj repozytorium lub pobierz pliki.
 3. Otwórz projekt w IDE (IntelliJ IDEA, Eclipse, VS Code).
 4. Znajdź plik główny: `src/main/java/com/shop/StoreGuiApp.java`.
 5. Uruchom metodę `main` w tym pliku.
 
-> **Uwaga:** Aplikacja uruchamia się w trybie okienkowym. Po starcie wybierz rolę (Klient lub Administrator).
+> **Uwaga:** Aplikacja uruchamia się w trybie GUI. 
 
 ## Technologie i Narzędzia
 * **Język:** Java
