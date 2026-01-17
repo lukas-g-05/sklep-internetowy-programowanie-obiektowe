@@ -73,5 +73,5 @@ Funkcjonalność odpowiedzialna za symulację opłacenia zamówienia.
 ---
 
 ## Autorzy
-Łuaksz Grobelny
+Łukasz Grobelny
 Michał Łażewski
