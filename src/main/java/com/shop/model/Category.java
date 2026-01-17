@@ -1,26 +1,25 @@
 package com.shop.model;
 
-public class Category {
-    private int categoryId;
-    private String name;
-    private String description;
+public enum Category {
+    ELEKTRONIKA("Sprzęt elektroniczny, laptopy, myszki"),
+    KSIAZKI("Literatura, podręczniki, ebooki"),
+    ODZIEZ("Ubrania damskie i męskie"),
+    DOM_I_OGROD("Akcesoria do domu i ogrodu");
 
-    public Category(int categoryId, String name, String description) {
-        this.categoryId = categoryId;
-        this.name = name;
+    private final String description;
+
+    Category(String description) {
         this.description = description;
     }
 
-    // Gettery i settery
-    public int getCategoryId() { return categoryId; }
-    public void setCategoryId(int categoryId) { this.categoryId = categoryId; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
-
+    public String getDescription() {
+        return description;
+    }
+    
+    // Nadpisujemy toString, żeby w GUI ładnie wyświetlało nazwę (np. "Elektronika" zamiast "ELEKTRONIKA")
     @Override
     public String toString() {
-        return name;
+        // Zamienia np. "DOM_I_OGROD" na "Dom i ogrod"
+        return name().charAt(0) + name().substring(1).toLowerCase().replace('_', ' ');
     }
 }

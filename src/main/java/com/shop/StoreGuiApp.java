@@ -196,23 +196,30 @@ public class StoreGuiApp {
     }
 
     private static void addNewProduct(Admin admin) {
-        try {
-            String name = JOptionPane.showInputDialog("Nazwa:");
-            double price = Double.parseDouble(JOptionPane.showInputDialog("Cena:"));
-            int stock = Integer.parseInt(JOptionPane.showInputDialog("Ilość:"));
-            Category cat = new Category(1, "Ogólne", "Różne");
-            Product newProduct = new Product(repository.getAllProducts().size() + 1, name, "Opis", price, stock, cat);
-            admin.addProduct(newProduct, repository);
-            JOptionPane.showMessageDialog(null, "Dodano.");
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Błąd.");
+    try {
+        String name = JOptionPane.showInputDialog("Nazwa:");
+        double price = Double.parseDouble(JOptionPane.showInputDialog("Cena:"));
+        int stock = Integer.parseInt(JOptionPane.showInputDialog("Ilość:"));
+        
+        // Pozwalamy Adminowi wybrać kategorię z listy
+        Category[] cats = Category.values();
+        Category selectedCat = (Category) JOptionPane.showInputDialog(null, "Wybierz kategorię:",
+                "Kategoria", JOptionPane.QUESTION_MESSAGE, null, cats, cats[0]);
+
+        if (selectedCat != null) {
+             Product newProduct = new Product(repository.getAllProducts().size() + 1, name, "Opis", price, stock, selectedCat);
+             admin.addProduct(newProduct, repository);
+             JOptionPane.showMessageDialog(null, "Dodano.");
         }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Błąd danych.");
+    }
     }
 
     private static void initializeData() {
-        Category elec = new Category(1, "Elektronika", "Sprzęt");
-        repository.addProduct(new Product(1, "Laptop Dell", "Opis", 3500.0, 5, elec));
-        repository.addProduct(new Product(2, "Mysz Logitech", "Opis", 120.0, 20, elec));
-        repository.addProduct(new Product(3, "Klawiatura", "Opis", 250.0, 10, elec));
+    // Enum: Category.ELEKTRONIKA
+    repository.addProduct(new Product(1, "Laptop Dell", "Opis", 3500.0, 5, Category.ELEKTRONIKA));
+    repository.addProduct(new Product(2, "Mysz Logitech", "Opis", 120.0, 20, Category.ELEKTRONIKA));
+    repository.addProduct(new Product(3, "Java Podstawy", "Opis", 80.0, 10, Category.KSIAZKI));
     }
 }
